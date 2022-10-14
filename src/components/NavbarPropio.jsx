@@ -8,7 +8,7 @@ export default function NavbarPropio() {
 		<Navbar bg="dark" variant="dark">
 			<Container>
 				<Navbar.Brand>
-					<img width="50" src="/pokebola.png" alt="" />
+					<img width="50" src="/pokebola.jpg" alt="" />
 				</Navbar.Brand>
 				<Navbar.Collapse className="justify-content-end">
 					<NavLink className={({ isActive }) => (isActive ? 'active' : 'inactive')} end to="/">

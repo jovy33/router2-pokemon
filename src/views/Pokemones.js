@@ -8,18 +8,17 @@ export default function Pokemones() {
 	const navigate = useNavigate();
 	const url = "https://pokeapi.co/api/v2/pokemon";
 	const traerPokemon = async () => {
-			const res = await fetch(url);
-			const {results} = await res.json();
-			setPokemones(results);
-			setPokemoneSelect(results[0].name);
+		const res = await fetch(url);
+		const { results } = await res.json();
+		setPokemones(results);
+		setPokemoneSelect(results[0].name);
 	}
 
 	const irDetallePokemon = async () => {
-		if (pokemonSelect) navigate (`/pokemones-detalle/${pokemonSelect}`);
-		else alert ("Debe seleccionar un pokemon");
+		navigate(`/pokemones-detalle/${pokemonSelect}`);
 	};
 
-	useEffect (() => {
+	useEffect(() => {
 		traerPokemon();
 	}, []);
 
@@ -30,11 +29,11 @@ export default function Pokemones() {
 				<select
 					value={pokemonSelect}
 					onChange={e => setPokemoneSelect(e.target.value)}>
-						{
-								pokemones.map(pokemon => <option details={pokemon} key={pokemon.name}>{pokemon.name}</option>)
-						}
-				</select><br/><br/>
-				<Button variant="dark" onClick={ irDetallePokemon }>Ver Detalle</Button>
+					{
+						pokemones.map(pokemon => <option details={pokemon} key={pokemon.name}>{pokemon.name}</option>)
+					}
+				</select><br /><br />
+				<Button variant="dark" onClick={irDetallePokemon}>Ver Detalle</Button>
 			</div>
 		</div>
 	);

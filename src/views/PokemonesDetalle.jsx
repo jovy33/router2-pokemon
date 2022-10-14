@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from 'react-router-dom';
 
 export default function PokemonesDetalle() {
-  const [detallePokemon, setDetallePokemon] = useState([]);
+	const [detallePokemon, setDetallePokemon] = useState([]);
 	const { id } = useParams();
 
 	const url = "https://pokeapi.co/api/v2/pokemon/";
@@ -23,17 +23,17 @@ export default function PokemonesDetalle() {
 		setDetallePokemon(pokemon);
 	}
 
-	useEffect (() => {
+	useEffect(() => {
 		traerPokemon();
 	}, []);
 
-  return (
-    <div className='mt-5 divPokemonDetalle'>
+	return (
+		<div className='mt-5 divPokemonDetalle'>
 			<div className='divImgDetalle'>
 				<img src={detallePokemon.img} alt="imagen pokemon" />
 			</div>
-			<div className='divDetalle'>			
-				<h1>{ id }</h1>
+			<div className='divDetalle'>
+				<h1>{id}</h1>
 				<ul>
 					<li>hp: {detallePokemon.hp}</li>
 					<li>attack: {detallePokemon.attack}</li>
@@ -45,5 +45,5 @@ export default function PokemonesDetalle() {
 				<span>{detallePokemon.type}</span>
 			</div>
 		</div>
-  )
+	)
 }
