@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.active {
+  color: red;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.inactive {
+  color: white;
+  text-decoration: none;
+  font-size: larger;
+  font-weight: bold;
+}
+
+.divPokemonDetalle {
+  display: flex;
+  justify-content: center;
+}
+
+.divImgDetalle {
+  margin-right: 5rem;
+}
+
+.divDetalle {
+  margin-top: 9rem;
+}

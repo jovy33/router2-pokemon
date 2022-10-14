@@ -1,0 +1,17 @@
+.App {
+  font-family: sans-serif;
+}
+
+.active {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+  color: lightgray;
+}
+
+a:hover {
+  color: red;
+  text-shadow: 1px 1px 1px black;
+}
